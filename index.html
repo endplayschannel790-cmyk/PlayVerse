@@ -256,4 +256,15 @@ if(saved.avatar&&typeof saved.avatar==="object")Object.assign(avatarState,saved.
 const originalApplyAvatar=applyAvatar;
 applyAvatar=function(){originalApplyAvatar();persist()};
 render();applyAvatar();updateProfile();renderShop();renderLeaderboard();renderPublish();resetGame();view("home");
-</script></body></html>
+</script>
+ 
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js")
+      .catch(error => console.error("PlayVerse worker:", error));
+  });
+}
+</script>
+
+</body></html>
