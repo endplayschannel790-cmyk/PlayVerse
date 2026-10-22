@@ -1043,4 +1043,13 @@ function grantUltraMonthlyCoins(){
  }catch(e){const status=$("ultraRankStatus");if(status)status.textContent="Ultra monthly reward needs browser storage enabled to prevent repeat claims.";}
 }
 try{updateUltraAccess();applyUltraTheme(userSettings.ultraTheme||"default");grantUltraMonthlyCoins();}catch(e){}
-</script></body></html>
+<script>
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker.register("./sw.js")
+      .catch(error => console.log("Service worker error:", error));
+  });
+}
+</script>
+</body>
+</html>
