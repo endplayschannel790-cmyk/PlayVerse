@@ -1,6 +1,6 @@
 {
-  "name": "OnTheRedWorld",
-  "short_name": "OnTheRedWorld",
+  "name": "PlayVerse",
+  "short_name": "PlayVerse",
   "description": "Play, discover, and create games on PlayVerse!",
   "start_url": "./",
   "scope": "./",
