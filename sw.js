@@ -1,5 +1,5 @@
 
-const CACHE_NAME = "ontheredworld-v1";
+const CACHE_NAME = "playverse-v1";
 
 self.addEventListener("install", (event) => {
   self.skipWaiting();
